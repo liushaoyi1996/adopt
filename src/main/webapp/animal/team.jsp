@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: 24255
-  Date: 2019/8/22
-  Time: 23:50
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!DOCTYPE html>
@@ -32,9 +25,21 @@
 <!-- team -->
 <div class="team" id="team">
     <div class="container">
-        <h3 class="agile-title">我们的团队</h3>
+        <h3 class="agile-title">欢聚公益慈善团队</h3>
         <div class="team-agileinfo">
+            <div class="team-grid-right aliquam">
+                <div>
+                    <img src="../images/5.jpg" alt="" width="300px" height="250px">
+                </div>
+            </div>
 
+            <div class="team-grid-left non">
+                <h4>欢聚集团(广州华多网络科技有限公司)</h4>
+                <p>为推动互联网与公益慈善事业深度融合，欢聚集团专门设立了独立的CSR部门，组建欢聚公益慈善团队，成立互联网直播行业第一家公益慈善基金会——广州市欢聚时代公益慈善基金会，并以此为基础，凝聚全集团数千名员工力量，发挥集团员工集体智慧，为社会公益做出卓越贡献。</p>
+                <p>2020年新冠疫情期间，欢聚集团捐款总额超过2200万元，其中1000万元用于采购国内外物资，由该团队点对点驰援疫区。除抗击疫情外，该慈善团队自2019年起，在省内外多地开展点对点扶贫捐助、长线培训等项目，不断催生乡村发展内生动力，推动乡村振兴发展。
+
+                </p>
+            </div>
         </div>
 
     </div>
@@ -52,13 +57,13 @@
     <div class="container">
         <div class="col-md-9 col-sm-9 contact-right">
             <form id="save_apply_form" >
-                <input type="text" id="new_name" name="name" placeholder="你的名字" >
-                <input type="text" id="new_email" name="email" placeholder="你的邮件号" >
-                <input type="text" id="new_age" name="age" placeholder="你的年龄">
-                <input type="text" id="new_telephone" name="telephone" placeholder="你的电话">
-                <textarea name="message" id="new_message" placeholder=你的感受"></textarea>
+                <input type="text" id="new_name" name="name" placeholder="你的名字" > <br>
+                <input type="text" id="new_email" name="email" placeholder="你的邮件号" > <br>
+                <input type="text" id="new_age" name="age" placeholder="你的年龄"> <br>
+                <input type="text" id="new_telephone" name="telephone" placeholder="你的电话"> <br>
+                <textarea name="message" id="new_message" placeholder=你的感受"></textarea> <br>
             </form>
-            <button type="button" id="save_apply_btn">提交</button>
+            <button type="button" id="save_apply_btn" class="btn btn-primary btn-lg">提交</button>
         </div>
         <div class="col-md-3 col-sm-3 contact-left">
             <div class="address">
@@ -114,34 +119,34 @@
         });
     }
 
-    function build_admins_table(result){
-        //清空table表格
-        $(".team-agileinfo").empty();
-        //index：下标 user：单个对象
-        var admins=result.extend.pageInfo.list;
-        $.each(admins,function(index,admin){
-            var pic=null
-            var adminNameTd=null;
-            var remarkTd=null;
-            if( index%2 != 0){
-                pic=$("<div></div>").addClass("team-grid-right aliquam").append($("<img/>").
-                addClass("img-responsive").attr("src","../images/"+admin.pic));
-                adminNameTd=$("<div></div>").addClass("team-grid-left non").append($("<h4></h4>")).append(admin.adminName);
-                remarkTd=$("<p></p>").append(admin.remark);
-                adminNameTd.append(remarkTd);
-            }else{
-                pic=$("<div></div>").addClass("team-grid-right").append($("<img/>").
-                addClass("img-responsive").attr("src","../images/"+admin.pic));
-                adminNameTd=$("<div></div>").addClass("team-grid-left").append($("<h4></h4>")).append(admin.adminName);
-                remarkTd=$("<p></p>").append(admin.remark);
-                adminNameTd.append(remarkTd);
-            }
-            $("<div></div>").addClass("col-md-6 team-grid w3-agileits")
-                .append(pic)
-                .append(adminNameTd)
-                .appendTo(".team-agileinfo");
-        });
-    }
+    // function build_admins_table(result){
+    //     //清空table表格
+    //     $(".team-agileinfo").empty();
+    //     //index：下标 user：单个对象
+    //     var admins=result.extend.pageInfo.list;
+    //     $.each(admins,function(index,admin){
+    //         var pic=null
+    //         var adminNameTd=null;
+    //         var remarkTd=null;
+    //         if( index%2 != 0){
+    //             pic=$("<div></div>").addClass("team-grid-right aliquam").append($("<img/>").
+    //             addClass("img-responsive").attr("src","../images/"+admin.pic));
+    //             adminNameTd=$("<div></div>").addClass("team-grid-left non").append($("<h4></h4>")).append(admin.adminName);
+    //             remarkTd=$("<p></p>").append(admin.remark);
+    //             adminNameTd.append(remarkTd);
+    //         }else{
+    //             pic=$("<div></div>").addClass("team-grid-right").append($("<img/>").
+    //             addClass("img-responsive").attr("src","../images/"+admin.pic));
+    //             adminNameTd=$("<div></div>").addClass("team-grid-left").append($("<h4></h4>")).append(admin.adminName);
+    //             remarkTd=$("<p></p>").append(admin.remark);
+    //             adminNameTd.append(remarkTd);
+    //         }
+    //         $("<div></div>").addClass("col-md-6 team-grid w3-agileits")
+    //             .append(pic)
+    //             .append(adminNameTd)
+    //             .appendTo(".team-agileinfo");
+    //     });
+    // }
 
     //解析显示分页条，点击分页要能去下一页....
     function build_page_nav(result){

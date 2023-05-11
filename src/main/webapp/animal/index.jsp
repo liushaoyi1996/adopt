@@ -37,7 +37,7 @@
 <!-- //sticky navigation 首页轮播图 -->
 <div class="w3l-main" id="home1">
     <div class="container">
-        <!-- header -->
+        <!--
         <div class="header">
             <div class="logo">
                 <h1>
@@ -48,7 +48,7 @@
             </div>
             <div class="clearfix"> </div>
         </div>
-        <!-- //header -->
+         -->
     </div>
     <!-- Slider -->
     <div class="slider">

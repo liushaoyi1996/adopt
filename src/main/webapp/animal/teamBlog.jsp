@@ -44,7 +44,7 @@
 <div class="blog" id="blog" >
     <div class="container">
         <h3 class="agile-title">团队活动</h3>
-        <div class="col-md-5 col-xs-6 blog-grids">
+        <div class="col-md-11 col-xs-6 blog-grids">
 
 
             <div class="clearfix"></div>
@@ -110,7 +110,7 @@
 
     function build_blogs_table(result){
         //清空table表格
-        $(".col-md-5").empty();
+        $(".col-md-11").empty();
         //index：下标 user：单个对象
         var blogs=result.extend.pageInfo.list;
         $.each(blogs,function(index,blog){
@@ -119,7 +119,9 @@
 
             var blogTd=$("<div></div>").addClass("blog-right-agileits-w3layouts");
 
-            var titleTd=$("<h4></h4>").append($("<a></a>")).addClass("myfont").append(blog.title);
+            var titleTd=$("<h2></h2>").append($("<a></a>")).addClass("myfont").append(blog.title);
+
+            var abc=$(" <img src='../images/a1.png' alt='' class='cc'>");
             titleTd.attr("id","title_btn");
             titleTd.attr("title-id",blog.id);
 
@@ -133,7 +135,8 @@
                     .append(yearTd)
                     .append(blogTd)
                     .append(clear)
-                    .appendTo(".col-md-5");
+                    .append(abc)
+                    .appendTo(".col-md-11");
 
         });
     }

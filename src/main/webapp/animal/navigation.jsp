@@ -34,7 +34,7 @@
                         <a href="${pageContext.request.contextPath}/animal/about.jsp">公益募捐知识</a>
                     </li>
                     <li>
-                        <a href="${pageContext.request.contextPath}/animal/">募捐中心</a>
+                        <a href="${pageContext.request.contextPath}/animal/service.jsp">募捐中心</a>
                     </li>
                     <li>
                         <a href="${pageContext.request.contextPath}/animal/teamBlog.jsp">团队活动</a>
